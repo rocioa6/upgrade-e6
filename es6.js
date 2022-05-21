@@ -12,6 +12,8 @@ arrowFunction();
 arrowFunction(3);
 arrowFunction(3, 4);
 
+///////////////////////
+
 
 /* 2.1 En base al siguiente javascript, crea variables en base a las propiedades 
 del objeto usando object destructuring e imprimelas por consola. Cuidado, 
@@ -48,3 +50,36 @@ let { name2, itv } = car;
 console.log(`nombre ${name2} itv ${itv}`);
 let [ year1, year2, year3 ] = itv;
 console.log(year1, year2, year3);
+
+
+///////////////////////
+
+/* 3.1 Dado el siguiente array, crea una copia usando spread operators. */
+let pointsList = [32, 54, 21, 64, 75, 43]
+let pointListCopy = [...pointsList];
+console.log(pointListCopy);
+
+/* 3.2 Dado el siguiente objeto, crea una copia usando spread operators. */
+let toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+let toyCopy = {...toy};
+console.log(toyCopy);
+
+/* 3.3 Dado los siguientes arrays, crea un nuevo array juntandolos usando 
+spread operatos. */
+pointsList = [32, 54, 21, 64, 75, 43];
+let pointsLis2 = [54,87,99,65,32];
+let pointListNew = [...pointsList, ...pointsLis2];
+console.log(pointListNew);
+/* 3.4 Dado los siguientes objetos. Crea un nuevo objeto fusionando los dos 
+con spread operators. */
+toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+let toyUpdate = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']};
+let toyNew = {...toy, ...toyUpdate};
+console.log(toyNew);
+
+/* 3.5 Dado el siguiente array. Crear una copia de él eliminando la posición 2 
+pero sin editar el array inicial. De nuevo, usando spread operatos. */
+let colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
+let colorsNew = [...colors];
+colorsNew.splice(2,1)
+console.log(colorsNew);
